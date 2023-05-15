@@ -1,0 +1,85 @@
+ [
+   {
+        "id": 1,
+        "title": "Question1 - stack overflow",
+        "body": "lorem ipsum",
+        "author": {
+           "id": "2",
+           "name": "Martha",
+           "picture" : ""
+        },
+        "creationDate": "12-11-2001 12:12:09",
+        "tags": [
+          "#stack","#overflow"
+        ],
+        "vote": 0,
+        "answers": [
+          {
+            "id": 1,
+            "text": "Answer1",
+            "author": {
+              "id": "3",
+              "name": "Karen",
+              "picture" : ""
+            },
+            "creationDate": "12-11-2001 19:12:03",
+            "vote": 0,
+            "picture": ""
+          },
+          {
+            "id": 2,
+            "text": "Answer12",
+            "author": {
+              "id": "2",
+              "name": "Martha",
+              "picture" : ""
+            },
+            "creationDate": "12-11-2001 22:09:01",
+            "vote": 0,
+            "picture": ""
+          }
+        ]
+   },
+   {
+        "id": 2,
+        "title": "Question2 - out of bounds exception",
+        "body": "lorem ipsussm",
+        "author": {
+           "id": "4",
+           "name": "Maciej",
+           "picture" : ""
+        },
+        "creationDate": "12-12-2021 13:12:09",
+        "tags": [
+          "#stack","#array","#exception"
+        ],
+        "vote": 0,
+        "answers": [
+          {
+            "id": 3,
+            "text": "Answer21",
+            "author": {
+              "id": "3",
+              "name": "Karen",
+              "picture" : ""
+            },
+            "creationDate": "12-12-2021 22:12:09",
+            "vote": 0,
+            "picture": ""
+          },
+          {
+            "id": 4,
+            "text": "Answer22",
+            "author": {
+              "id": "2",
+              "name": "Martha",
+              "picture" : ""
+            },
+            "creationDate": "15-12-2021 09:12:01",
+            "vote": 0,
+            "picture": ""
+          }
+        ]
+   }
+ ]
+

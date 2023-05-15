@@ -1,0 +1,26 @@
+<div class="question">
+  <div class="left">
+    <div class="top">
+      <app-vote [data]="data.vote"></app-vote>
+      <div class="answers">{{data.answers.length}} answers</div>
+    </div>
+    <div class="bottom">
+      <div class="author">{{ data.author }}</div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="title" >
+      <ng-container *ngIf="showRoutingLink">
+        <a [routerLink]="['/question', data.id]">{{ data.title }}</a>
+      </ng-container>
+      <ng-container *ngIf="!showRoutingLink">
+        {{ data.title }}
+      </ng-container>
+    </div>
+    <div class="question-tags">
+      <span class="tag" *ngFor="let tag of data.tags">{{ tag }}</span>
+    </div>
+    <div class="description">{{ data.body }}</div>
+    <div class="creation">{{data.creationDate}}</div>
+  </div>
+</div>

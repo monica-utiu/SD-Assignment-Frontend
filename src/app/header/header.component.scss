@@ -1,0 +1,30 @@
+.header-container {
+  width: 100%;
+  height: 80px;
+  background-color: #fdc827;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: system-ui;
+    color: #676767;
+    letter-spacing: 4px;
+    margin-left: 40px;
+    cursor: pointer;
+  }
+  .stack {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    width: 70px;
+  }
+  .account {
+    position: absolute;
+    top: 25px;
+    right: 90px;
+    width: 40px;
+    cursor: pointer;
+  }
+}

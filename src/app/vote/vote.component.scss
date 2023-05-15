@@ -1,0 +1,18 @@
+.vote {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+
+  .up {
+    width: 25px;
+    margin-left: 40px;
+    margin-bottom: 4px;
+  }
+
+  .down {
+    width: 25px;
+    margin-left: 10px;
+    margin-bottom: 4px;
+    transform: rotate(180deg);
+  }
+}

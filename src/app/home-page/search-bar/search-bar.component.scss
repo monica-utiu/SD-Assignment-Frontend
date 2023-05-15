@@ -1,0 +1,14 @@
+.search {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //left: 50px;
+  justify-content: center;
+  .input {
+    position: absolute;
+    width: 80%;
+    height: 40px;
+    margin-top: 40px;
+  }
+}
