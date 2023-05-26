@@ -6,6 +6,6 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./vote.component.scss']
 })
 export class VoteComponent {
-  @Input() data!: string;
+  @Input() data!: Number;
 
 }

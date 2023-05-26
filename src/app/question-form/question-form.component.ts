@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {Question} from "../question";
 import {MatChipInputEvent} from "@angular/material/chips";
+import {User} from "../user";
 
 @Component({
   selector: 'app-question-form',
@@ -10,18 +11,19 @@ import {MatChipInputEvent} from "@angular/material/chips";
 })
 export class QuestionFormComponent {
   newQuestion: Question = {
-    id: '', // Set as appropriate
+    id: 10, // Set as appropriate
     title: '',
-    body: '',
-    creationDate: '',
-    author: '',
+    text: '',
+    creation: new Date(),
+    author: {} as User,
     tags: [],
     picture: '',
-    vote: '',
-    answers: []
+    vote: 0,
+    answers: [],
+    updated: new Date()
   };
 
-  tags: string[] = [];
+  tags: string[] = ["stack","overflow","error"];
   separatorKeysCodes: number[] = [13, 188];
   addOnBlur = true;
 

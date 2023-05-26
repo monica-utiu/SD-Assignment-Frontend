@@ -23,15 +23,6 @@ export class QuestionListComponent implements OnInit{
     this.getItems();
   }
 
-  // getItems() {
-  //   this.http
-  //     .get<Question[]>('assets/data/questions.json')
-  //     .subscribe((item) => {
-  //       this.items = item;
-  //       console.log(item);
-  //     });
-  // }
-
   getItems() {
     this.questionService.getQuestions().subscribe(questions => {
       this.items = questions;

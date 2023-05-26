@@ -9,9 +9,11 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AnswerService {
   private questionsUrl = 'assets/data/questions.json';
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+    //this.questionsUrl = 'http://localhost:8080/questions';
+  }
 
-  getAnswersByQuestionId(id: string): Observable<Answer[]> {
+  getAnswersByQuestionId(id: Number): Observable<Answer[]> {
     return this.http.get<Question[]>(this.questionsUrl).pipe(
       map(questions => {
         const question = questions.find(question => question.id == id);
@@ -26,10 +28,10 @@ export class AnswerService {
     return {
       id: answerData.id,
       text: answerData.text,
-      creationDate: answerData.creationDate,
+      creation: answerData.creationDate,
       author: answerData.author,
       picture: answerData.picture,
-      vote: answerData.vote,
+      vote: answerData.vote
     };
   }
 }

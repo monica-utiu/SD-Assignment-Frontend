@@ -1,0 +1,22 @@
+.list-a {
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  //background-color: #FFC55C;
+  list-style-type: none;
+  padding: 5px;
+  flex-direction: column;
+
+  .list-a li {
+    display: flex;
+  }
+}
+
+.list-a li:nth-child(odd) {
+  background-color: #afa39d;
+}
+
+.list-a li:nth-child(even) {
+  background-color: #8c7b73;
+}

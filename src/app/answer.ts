@@ -1,8 +1,11 @@
+import {User} from "./user";
+import {UserDto} from "./user-dto";
+
 export interface Answer {
   id: string;
   text: string;
-  creationDate: string;
-  author: string;
+  creation: Date;
+  author: UserDto;
   picture: string;
-  vote: string;
+  vote: Number;
 }

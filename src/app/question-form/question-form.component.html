@@ -8,21 +8,20 @@
   </div>
   <div>
     <label for="body">Body:</label>
-    <textarea id="body" name="body" [(ngModel)]="newQuestion.body" required></textarea>
+    <textarea id="body" name="body" [(ngModel)]="newQuestion.text" required></textarea>
     <div *ngIf="questionForm.submitted && questionForm.controls['body'].invalid" class="error-message">
       Body is required.
     </div>
   </div>
   <div>
-    <mat-chip-list #chipList>
+    <mat-chip-grid #chipList>
       <mat-chip *ngFor="let tag of tags" (removed)="removeTag(tag)">
         {{ tag }}
         <mat-icon matChipRemove>cancel</mat-icon>
       </mat-chip>
       <input [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
              [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="addTag($event)">
-    </mat-chip-list>
-
+    </mat-chip-grid>
   </div>
   <div>
     <label for="picture">Picture:</label>

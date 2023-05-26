@@ -5,7 +5,7 @@
       <div class="answers">{{data.answers.length}} answers</div>
     </div>
     <div class="bottom">
-      <div class="author">{{ data.author }}</div>
+      <div class="author">{{ data.author.firstName }}</div>
     </div>
   </div>
   <div class="right">
@@ -17,10 +17,13 @@
         {{ data.title }}
       </ng-container>
     </div>
-    <div class="question-tags">
-      <span class="tag" *ngFor="let tag of data.tags">{{ tag }}</span>
+<!--    <div class="question-tags">-->
+<!--      <span class="tag" *ngFor="let tag of data.tags">{{ tag }}</span>-->
+<!--    </div>-->
+    <div class="description">
+      <div class="text">{{ data.text }}</div>
+      <div class="answers" *ngFor="let answer of data.answers">{{answer}}</div>
     </div>
-    <div class="description">{{ data.body }}</div>
-    <div class="creation">{{data.creationDate}}</div>
+    <div class="creation">{{data.creation}}</div>
   </div>
 </div>
