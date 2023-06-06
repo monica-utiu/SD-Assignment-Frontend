@@ -3,5 +3,10 @@ export interface UserDto {
   userId: Number;
   firstName: string;
   lastName: string;
+  email: string;
   picture: string;
+  phone: string;
+  rating:  Number;
+  banned: boolean;
+
 }

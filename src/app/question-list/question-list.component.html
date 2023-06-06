@@ -1,9 +1,8 @@
 <div>
   <app-search-bar *ngIf="items!=null" (term1)="setTerm($event)"></app-search-bar>
   <ul class="list-q">
-    <li  *ngFor = "let item of items | filter: term" >
+    <li  *ngFor = "let item of items | filter: term " >
       <app-question [data]="item" [showRoutingLink]="true"></app-question>
-      <button class="btn-close">Edit</button>
     </li>
   </ul>
 </div>

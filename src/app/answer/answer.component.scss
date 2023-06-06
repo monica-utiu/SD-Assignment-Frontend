@@ -1,0 +1,68 @@
+.owner {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 10px;
+}
+
+.left {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.author {
+  margin-top: 10px;
+}
+
+.author div {
+  font-weight: bold;
+}
+
+.author a {
+  text-decoration: none;
+  color: blue;
+}
+
+.center {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text {
+  margin-bottom: 10px;
+}
+
+.right {
+  grid-column: 3;
+  display: flex;
+  justify-content: flex-end;
+}
+
+// Button Styles
+$button-primary-color: #007bff;
+$button-primary-hover-color: #0056b3;
+$button-secondary-color: #6c757d;
+$button-secondary-hover-color: #444;
+
+.btn-edit, .btn-delete {
+  width: 75px;
+  background-color: #FDC827;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 9px;
+  border: 2px #383838;
+  cursor: pointer;
+}
+.btn-edit:hover, .btn-delete:hover {
+  background-color: #fff;
+  color: #FDC827;
+}
+
+
+.form {
+  grid-column: 1 / span 3;
+}

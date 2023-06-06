@@ -1,7 +1,24 @@
-<div>
-  <div class="text"> {{data.text}}</div>
-  <div class="author">{{data.author.firstName}}</div>
-  <div class="picture">{{data.picture}}</div>
-  <div class="date">{{data.creation}}</div>
-  <div class="vote">{{data.vote}}</div>
+<div class="owner">
+  <div class="left">
+    <app-vote [data]="data" [answer]="1"></app-vote>
+    <div class="author">
+      <a [routerLink]="['/account', data.author.userId]">{{data.author.firstName}}</a>
+      <div>score: {{data.author.rating}}</div>
+
+    </div>
+  </div>
+  <div class="center" *ngIf="!showForm">
+    <div class="text"> {{data.text}}</div>
+    <div class="picture">{{data.picture}}</div>
+    <div class="date">{{data.creation}}</div>
+  </div>
+  <div class="right">
+    <ng-container *ngIf="(isOwner || isMod)">
+      <button class="btn-edit" (click)="edit()">Edit</button>
+      <button class="btn-delete" (click)="delete()">Delete</button>
+    </ng-container>
+  </div>
+  <div class="form" *ngIf="showForm">
+    <app-answer-form [newAnswer]="data" [q_id]="qId" [isUpdate]="isUpdated" [a_id]="oldAId"></app-answer-form>
+  </div>
 </div>

@@ -74,4 +74,19 @@
       margin-bottom: 20px;
     }
   }
+
+  .btn-edit, .btn-delete {
+    width: 75px;
+    background-color: #FDC827;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 9px;
+    border: 2px #383838;
+    cursor: pointer;
+  }
+  .btn-edit:hover, .btn-delete:hover {
+    background-color: #fff;
+    color: #FDC827;
+  }
 }

@@ -1,6 +1,7 @@
 import {User} from "./user";
 import {Answer} from "./answer";
 import {UserDto} from "./user-dto";
+import {Tags} from "./tags";
 
 export interface Question {
   id: Number;
@@ -10,8 +11,9 @@ export interface Question {
   updated: Date;
   // MAYBE SHOULD BE uSER OR CHANGE IN BACKEND FOR USERDTO
   author: UserDto;
-  tags: string[];
+  tags: Tags[];
   picture: string;
   vote: Number;
-  answers: Answer[];
+  answers: String[];
+  rating: Number;
 }

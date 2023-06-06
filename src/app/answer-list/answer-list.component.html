@@ -1,7 +1,5 @@
-
 <ul class="list-a">
   <li  *ngFor = "let item of data" >
-    <app-answer [data]="item" ></app-answer>
-    <button class="btn-close">Edit</button>
+    <app-answer [data]="item" [qId]="qId" ></app-answer>
   </li>
 </ul>

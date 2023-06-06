@@ -2,9 +2,12 @@ export interface User {
   userId: Number;
   firstName: string;
   lastName: string;
-  picture: string;
+  picture: Blob;
   email: string;
+  passphrase: string;
   phone: string;
   rating: Number;
-  role: string;
+  rol: string;
+  banned: boolean;
+
 }

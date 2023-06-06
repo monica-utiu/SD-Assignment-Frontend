@@ -9,6 +9,11 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
 
+  userData : any = {
+    id: Number,
+    rol: ''
+  };
+
   constructor(private router: Router, private auth: AuthService) { }
 
   ngOnInit(): void {
@@ -19,9 +24,16 @@ export class HeaderComponent implements OnInit {
   }
 
   goToUser() {
-    this.router.navigate(['account'])
+    let data: any = localStorage.getItem("userData");
+    this.userData = JSON.parse(data);
+    console.log(this.userData)
+    this.router.navigate(['/account',this.userData.id]);
   }
   logout() {
     this.auth.logout();
+  }
+
+  goToQuestionForm() {
+    this.router.navigate(['new-question'])
   }
 }

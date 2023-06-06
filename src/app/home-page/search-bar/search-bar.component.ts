@@ -17,7 +17,6 @@ export class SearchBarComponent{
   }
 
   onInput(event: string): void {
-    debugger
     this.term1.emit(event)
   }
 

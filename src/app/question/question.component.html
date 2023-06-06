@@ -1,11 +1,14 @@
 <div class="question">
   <div class="left">
     <div class="top">
-      <app-vote [data]="data.vote"></app-vote>
+      <app-vote [data]="data" [question]="1"></app-vote>
       <div class="answers">{{data.answers.length}} answers</div>
     </div>
     <div class="bottom">
-      <div class="author">{{ data.author.firstName }}</div>
+      <div class="author">
+        <div>{{data.author.rating}}</div>
+        <a [routerLink]="['/account', data.author.userId]">{{ data.author.firstName +" " +data.author.lastName}}</a>
+      </div>
     </div>
   </div>
   <div class="right">
@@ -22,8 +25,14 @@
 <!--    </div>-->
     <div class="description">
       <div class="text">{{ data.text }}</div>
-      <div class="answers" *ngFor="let answer of data.answers">{{answer}}</div>
+<!--      <ng-container *ngIf="showRoutingLink">-->
+<!--        <div class="answers" *ngFor="let answer of data.answers">{{answer}}</div>-->
+<!--      </ng-container>-->
     </div>
     <div class="creation">{{data.creation}}</div>
   </div>
+  <ng-container *ngIf="isOwner || isMod">
+    <button class="btn-edit" (click)="edit()">Edit</button>
+    <button class="btn-delete" (click)="delete()">Delete</button>
+  </ng-container>
 </div>

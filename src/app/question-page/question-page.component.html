@@ -3,12 +3,11 @@
   <app-question [data]="question" [showRoutingLink]="false"></app-question>
   <button class="btn-answer" (click)="toggleForm()">Add answer</button>
   <div class="form" *ngIf="showForm">
-    <app-answer-form></app-answer-form>
+    <app-answer-form [newAnswer]="oldAnswer" [q_id]="question.id" [isUpdate]="isUpdated" [a_id]="oldAId"></app-answer-form>
   </div>
-  <!--  if user is author the buttons for edit delete -->
   <div class="answer-list">
     <div *ngIf="answers">
-      <app-answer-list [data]="answers"></app-answer-list>
+      <app-answer-list [data]="answers" [qId]="question.id"></app-answer-list>
     </div>
 
   </div>

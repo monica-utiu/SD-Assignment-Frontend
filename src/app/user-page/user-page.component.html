@@ -1,2 +1,9 @@
 <app-header></app-header>
-<app-user-info></app-user-info>
+<app-user-info [user]="user"></app-user-info>
+<ng-container *ngIf="isBannable">
+  <button class="ban" (click)="banUser()">Ban user</button>
+</ng-container>
+<ng-container *ngIf="user.banned">
+  This user is banned!
+  <button class="ban" (click)="banUser()">Unban user</button>
+</ng-container>
